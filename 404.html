@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Không Tìm Thấy Trang | PTIT DevOps</title>
+    <style>
+        :root {
+            --primary: #c8102e;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #f43f5e;
+            --border: #334155;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .container {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 620px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        }
+        .error-code {
+            font-size: 96px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: rgba(244, 63, 94, 0.15);
+            color: #fb7185;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        p.desc {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .btn-home {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, #9e0b23 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+        .btn-home:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="badge">Page Not Found</div>
+        <h1>Không Tìm Thấy Đường Dẫn Yêu Cầu</h1>
+        <p class="desc">
+            Đường dẫn tĩnh bạn đang truy cập không tồn tại hoặc đã được di chuyển trên máy chủ PTIT Web Server. Vui lòng kiểm tra lại URL hoặc quay về trang chủ.
+        </p>
+        <a href="/" class="btn-home">← Quay Về Trang Chủ</a>
+        <footer>
+            PTIT DevOps Course - Session 03 • Nginx Custom Error Page
+        </footer>
+    </div>
+</body>
+</html>
